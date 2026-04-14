@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-stone-200" flex>
+  <section id="carrinho" class="fixed top-0 right-[-360px] bg-gray-300 h-screen w-[360px] text-white z-50 duration-200 border-l border-white-900 p-5 flex flex-col justify-between">
+    <div id="cabecalho-carrinho" class="flex justify-between m-4">
+      <p>Meu carrinho</p>
+      <button id="fechar-carrinho"><i class="fa-solid fa-circle-xmark hover:text-red-400"></i></button>
+    </div>
+     <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2">
+
+    </section>
+    <p id="preco-total" class="bg-slate-900 text-white-300 rounded-sm pl-5">Total: $200</p>
+    <button class="bg-slate-900 text-white p-1 hover:bg-slate-600 hover:text-white" id="finalizar-compra">Finalizar Compra</button>
+  </section>
+  <header class="flex text-xl bg-gray-300 shadow-lg shadow-gray-400 px-8 py-2 justify-between sticky top-0 z-10">
+    <a href="./">
+    <img 
+    class="h-16"
+    src="./assets/logo.jpg" 
+    alt="Logo do trenix">
+    </a>
+    <div class="text-white flex gap-2 items-end mx-2">
+      <button id="abrir-carrinho" class="mx-2"><i class="fa-solid fa-cart-shopping"></i></button>
+      <a href="./pedidos.html">
+      <button class="mr-2"><i class="fa-solid fa-user"></i></button> 
+      </a>
+    </div>
+  </header>
+  <main class="flex flex-col items-center">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">
+      <input id="exibir-todos" type="radio" name="filtro" class="peer hidden" checked />
+      <label for="exibir-todos" class="peer-checked:bg-slate-300 peer-checked:text-black peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Todos</label>
+      </div>
+      <div class="px-2">
+      <input id="exibir-masculinos" type="radio" name="filtro" class="peer hidden"/>
+      <label for="exibir-masculinos" class="peer-checked:bg-slate-300 peer-checked:text-black peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Masculinos</label>
+      </div>
+      <div class="px-2">
+      <input id="exibir-femininos" type="radio" name="filtro" class="peer hidden"/>
+      <label for="exibir-femininos" class="peer-checked:bg-slate-300 peer-checked:text-black peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Femininos</label>
+      </div>
+    </section>
+    <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10">
+      
+    </section>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
